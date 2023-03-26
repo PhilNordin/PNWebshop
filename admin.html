@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>PN Webshop - admin</title>
+</head>
+<body>
+    <nav>
+        <a href="C:\Users\P\OneDrive\Skrivbord\Skolmaterial\JS och webbkom\PNWebshop" id="logo">PN Webshop</a>
+        <div id="navbar-right">
+            <ul>
+                <li><a href="\Users\P\OneDrive\Skrivbord\Skolmaterial\JS och webbkom\PNWebshop\index.html">Back to Main page</a></li>
+                <li><a href="admin.html">Admin</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section>
+        <article class="articleFrame">
+                <h1>Admin page</h1>
+                <br><br>
+            <fieldset>
+                <legend><strong>Update customer data:</strong></legend><br>
+                    <form onSubmit="return false">
+                        <input type="text" id="admin-name" name="name" placeholder="Write your name..." required>
+                        <br><br>
+                        <input type="email" id="admin-epost" name="epost" placeholder="Write your e-mail..." required>
+                        <br><br>
+                        <input type="text" id="admin-address" name="address" placeholder="Write your address..." required>
+                        <br><br>
+                        <input type="text" id="admin-id" name="id" placeholder="Enter product ID">
+                        <br><br>
+                        <select name="shipping" id="admin-shipping" required>
+                            <option value="" disabled selected>---</option>
+                            <option value="standard shipping">Standard shipping</option>
+                            <option value="UPS shipping">UPS shipping</option>
+                            <option value="PostNord">PostNord</option>
+                            <option value="Express">DHL Express</option>
+                        </select>
+                    </form>
+                </fieldset>
+        </article>
+    </section>
+
+    <section id="adminSection"></section>
+
+    <script src="js/admin.js"></script>
+</body>
+</html>

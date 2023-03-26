@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>PN Webshop</title>
+</head>
+<body>    
+    <nav>
+        <a href="C:\Users\P\OneDrive\Skrivbord\Skolmaterial\JS och webbkom\PNWebshop\index.html" id="logo">PN Webshop</a>
+        <div id="navbar-right">
+            <ul id="header">
+            </ul>
+        </div>
+        <div id="cartButton">
+            <input type="button" id="kundvagnbutton" value="Shop. Cart"><span id="cartItemNumber"></span>
+        </div>
+    </nav>  
+    <!-- Shopping cart -->
+    <section id="showCart" class="hideCart">
+        <article class="articleFrameCart">
+            <label><h3> Kundvagn</h3></label>
+            <table id="tillagd">
+            <br>
+            </table>
+            <p id="totalSumCart"></p>
+        </article>
+    </section>
+
+    <!-- Checkout -->
+    <section id="showCheckout" class="hideCheckout">
+        <article class="articleFrame">
+            <h1>Beställning:</h1>
+            <br>
+
+            <div class="flex-container">
+                <hr id="cartHR">
+                <p id="checkout"></p>
+
+                <br>
+            </div>
+
+            <div>
+                <p id="checkform">
+                    <fieldset>
+                        <legend><strong> Kunduppgifter: </strong></legend><br>
+                            <form onsubmit="return false">
+                                <input type="text" id="name" name="name" placeholder="Write your name..." required>
+                                <br><br>
+                                <input type="email" id="epost" name="epost" placeholder="Write your e-mail..." required>
+                                <br><br>
+                                <input type="text" id="address" name="address" placeholder="Write your address..." required>
+                                <br><br>
+                                <select name="shipping" id="shipping" required>
+                                    <option value="" disabled selected>---</option>
+                                    <option value="standard shipping">Standard shipping</option>
+                                    <option value="UPS shipping">UPS shipping</option>
+                                    <option value="PostNord">PostNord</option>
+                                    <option value="Express">DHL Express</option>
+                                </select>
+                                <br><br>
+                                <input type="submit" value="Finish order" onClick="addUser()">
+                            </form>
+                    </fieldset>
+                </p>
+            </div>
+        </article>
+    </section>
+
+    <!-- Hemsidans innehåll -->
+    <section id="webbutik" class="showWebbutik"></section>
+
+    <script src="./js/app.js"></script>
+</body>
+</html>
