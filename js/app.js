@@ -37,7 +37,7 @@ const shippingEl = document.getElementById("shipping");
     `;
 
 
-// -- GET -- fetch(webbbutiks data/artiklar mm.)
+// -- GET -- fetch(Hämtar all data från API)
 fetch("https://fakestoreapi.com/products")
     .then(res => res.json())
     .then(data => {
