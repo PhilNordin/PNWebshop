@@ -138,7 +138,7 @@ function getContent(data, selectedCategory) {
         }
     );
     
-        // Skicka API -- POST -- skickar in värden(användaren).                            fetch-anrop med POST-metod
+        // Skicka API -- POST -- skickar in värden(användaren). fetch-anrop med POST-metod
         fetch("https://firestore.googleapis.com/v1/projects/webshopdb-a8cb9/databases/(default)/documents/webbshop/", {
             method: 'POST',
             headers: {
@@ -153,12 +153,11 @@ function getContent(data, selectedCategory) {
             console.log(body);
 
             localStorage.clear();   // Rensa localStorage efter POST = true.
-            setTimeout(() => location.reload(), 2000); // reload sida efter 2 sekunder från POST ***********************************************************
+            setTimeout(() => location.reload(), 2000); // reload sida efter 2 sekunder från POST
 
 };
 
 //Produkt funktioner
-
 // Skapar Array för produkter (genom att deklarera array utanför funktioner så kommer vi åt den överallt).
 //Hämtar localstorage
 let productarray = JSON.parse(localStorage.getItem("output")) || [];
